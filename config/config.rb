@@ -32,4 +32,4 @@ on_stylesheet_saved do |file|
 end
 
 line_comments = false
-# output_style = :compact
+# output_style = :compact 

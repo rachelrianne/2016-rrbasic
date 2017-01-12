@@ -10,20 +10,6 @@ function my_jquery_enqueue() {
 }
 
 
-// ******************* Auto-create Meta Description ****************** //
-
-function create_meta_desc() {
-	global $post;
-	if (!is_single()) { return; }
-	$meta = strip_tags($post->post_content);
-	$meta = strip_shortcodes($post->post_content);
-	$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
-	$meta = substr($meta, 0, 125);
-	echo "<meta name='description' content='$meta' />";
-}
-add_action('wp_head', 'create_meta_desc');
-
-
 // ******************* Sidebars ****************** //
 
 if ( function_exists('register_sidebar') ) {
@@ -42,7 +28,6 @@ if ( function_exists('register_sidebar') ) {
 // ******************* Add Custom Menus ****************** //
 
 add_theme_support( 'menus' );
-register_nav_menu( 'single_nav', 'Single Navigation Menu' );
 register_nav_menus( array(
 	'sample_nav' => 'Sample Nav Menu',
 	'footer_nav' => 'Sample Footer Menu'
@@ -78,10 +63,14 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 50, 50, true );
 add_image_size( 'category-thumb', 300, 9999, true );
 
+
 // ******************* Add Custom Post Types & Taxonomies ****************** //
 
-function codex_custom_init() {
-		$labels = array(
+// add_action( 'init', 'create_book_post_type' );
+// add_action( 'init', 'create_book_taxonomies', 0 );
+
+// function create_book_post_type() {
+	$labels = array(
 		'name' => 'Books',
 		'singular_name' => 'Book',
 		'add_new' => 'Add New',
@@ -114,15 +103,8 @@ function codex_custom_init() {
 
 	register_post_type( 'book', $args );
 }
-add_action( 'init', 'codex_custom_init' );
 
-//hook into the init action and call create_book_taxonomies when it fires
-add_action( 'init', 'create_book_taxonomies', 0 );
-
-//create two taxonomies, genres and writers for the post type "book"
-function create_book_taxonomies() 
-{
-	// Add new taxonomy, make it hierarchical (like categories)
+function create_book_taxonomies() {
 	$labels = array(
 		'name'                => _x( 'Genres', 'taxonomy general name' ),
 		'singular_name'       => _x( 'Genre', 'taxonomy singular name' ),
@@ -180,17 +162,5 @@ function create_book_taxonomies()
 
 	register_taxonomy( 'writer', 'book', $args );
 }
-
-// ******************* Add Page Slug to Body Class ****************** //
-function add_slug_body_class( $classes ) {
-	global $post;
-	
-	if ( isset( $post ) ) {
-		$classes[] = $post->post_type . '-' . $post->post_name;
-	}
-	
-	return $classes;
-}
-add_filter( 'body_class', 'add_slug_body_class' );
 
 ?>

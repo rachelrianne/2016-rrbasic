@@ -15,12 +15,6 @@ $serif: 'Lora', serif;
 
 html {
 	font-size: 16px;
-	@include bpMax(med) {
-		// font-size: 14px;
-	}
-	@include bpMax(sm) {
-		// font-size: 12px;
-	}
 }
 body {
 	font-family: $sans-serif;
@@ -252,10 +246,36 @@ a {
 }
 
 /* Theme Components */
-ul.subnav {
-	list-style: none;
-	margin: 0;
-	li {
-		margin-bottom: 0.5em;
+
+.mobile-only {
+	@include bpMin(tablet) {
+		display: none;
+	}
+}
+.assistive-text { 
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.table {
+	display: table;
+	@include bpOnly(mobile) {
+		display: block;
+	}
+}
+.table-cell {
+	display: table-cell;
+	@include bpOnly(mobile) {
+		display: block;
+	}
+
+	&.vert-middle {
+		vertical-align: middle;
+	}
+	&.vert-bottom {
+		vertical-align: bottom;
 	}
 }

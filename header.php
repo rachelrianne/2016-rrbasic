@@ -20,7 +20,7 @@
 		<link rel="icon" type="image/png" href="http://EXAMPLE.com/favicon.png" />
 		<!-- CSS -->
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"/>
-		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/screen.css"/>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/stylesheets/css/screen.css"/>
 		<!--[if lt IE 9]>
 			<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie.css">
 		<![endif]-->
