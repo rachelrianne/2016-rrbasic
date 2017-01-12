@@ -1,0 +1,189 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/* =Grid
+----------------------------------------------- */
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+
+.row, .clearfix { zoom: 1; }
+.row:after, .clearfix:after { clear: both; }
+.row:before, .row:after, .clearfix:before, .clearfix:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+
+.col { float: left; }
+
+.span1of12 { width: 8.33333%; }
+
+.span2of12 { width: 16.66667%; }
+
+.span3of12 { width: 25%; }
+
+.span4of12 { width: 33.33333%; }
+
+.span5of12 { width: 41.66667%; }
+
+.span6of12 { width: 50%; }
+
+.span7of12 { width: 58.33333%; }
+
+.span8of12 { width: 66.66667%; }
+
+.span9of12 { width: 75%; }
+
+.span10of12 { width: 83.33333%; }
+
+.span11of12 { width: 91.66667%; }
+
+.span12of12 { width: 100%; }
+
+@media screen and (max-width: med) { .span1of6 { width: 16.66667%; } }
+
+@media screen and (max-width: med) { .span2of6 { width: 33.33333%; } }
+
+@media screen and (max-width: med) { .span3of6 { width: 50%; } }
+
+@media screen and (max-width: med) { .span4of6 { width: 66.66667%; } }
+
+@media screen and (max-width: med) { .span5of6 { width: 83.33333%; } }
+
+@media screen and (max-width: med) { .span6of6 { width: 100%; } }
+
+@media screen and (max-width: sm) { .span1of3 { width: 33.33333%; } }
+
+@media screen and (max-width: sm) { .span2of3 { width: 66.66667%; } }
+
+@media screen and (max-width: sm) { .span3of3 { width: 100%; } }
+
+.alignleft { float: left; margin-right: 15px; }
+
+.alignright { float: right; margin-left: 15px; }
+
+.aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; }
+
+/* =Layout
+----------------------------------------------- */
+html, body, #wrapper { height: 100%; }
+
+* { -webkit-transition: width 0.3s ease; -moz-transition: width 0.3s ease; -o-transition: width 0.3s ease; transition: width 0.3s ease; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* =Fonts
+----------------------------------------------- */
+html { font-size: 16px; }
+
+body { font-family: "Open Sans", sans-serif; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 { clear: both; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+/* Text elements */
+h1 { font-family: "Open Sans", sans-serif; font-size: 22.5px; font-size: 2.25rem; line-height: 1.6em; }
+
+h2 { font-family: "Open Sans", sans-serif; font-size: 15px; font-size: 1.5rem; text-transform: uppercase; }
+
+h3 { font-family: "Open Sans", sans-serif; font-size: 12.5px; font-size: 1.25rem; }
+
+h4 { font-family: "Open Sans", sans-serif; font-size: 11.25px; font-size: 1.125rem; }
+
+h5 { font-family: "Open Sans", sans-serif; font-size: 10px; font-size: 1rem; }
+
+p { font-family: "Open Sans", sans-serif; font-size: 10px; font-size: 1rem; line-height: 1.4em; margin-bottom: 1.625em; }
+
+ul, ol { font-family: "Open Sans", sans-serif; font-size: 10px; font-size: 1rem; line-height: 1.4em; margin: 0 0 1.625em 2.5em; }
+
+ul { list-style: square; }
+
+ol { list-style-type: decimal; }
+ol ol { list-style: upper-alpha; }
+ol ol ol { list-style: lower-roman; }
+ol ol ol ol { list-style: lower-alpha; }
+
+ul ul, ol ol, ul ol, ol ul { margin-bottom: 0; }
+
+dl { margin: 0 1.625em; }
+
+dt { font-weight: bold; }
+
+dd { margin-bottom: 1.625em; }
+
+strong { font-weight: bold; }
+
+cite, em, i { font-style: italic; }
+
+blockquote { font-family: "Lora", serif; font-size: 12.5px; font-size: 1.25rem; font-style: italic; font-weight: normal; margin: 0 3em 2em; }
+blockquote em, blockquote i, blockquote cite { font-style: normal; }
+blockquote cite { color: #666; font-family: "Open Sans", sans-serif; font-size: 10px; font-size: 1rem; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
+
+pre { background: #f4f4f4; font-family: "Courier 10 Pitch", Courier, monospace; font-size: 8.5px; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.625em; overflow: auto; padding: 0.75em 1.625em; }
+
+code, kbd, samp, var { font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; font-size: 8.5px; font-size: 0.85rem; }
+
+abbr, acronym, dfn { border-bottom: 1px dotted #666; cursor: help; }
+
+address { display: block; margin: 0 0 1.625em; }
+
+ins { background: #fff9c0; text-decoration: none; }
+
+sup, sub { font-size: 7.5px; font-size: 0.75rem; height: 0; line-height: 1; position: relative; vertical-align: baseline; }
+
+sup { bottom: 1ex; }
+
+sub { top: .5ex; }
+
+/* Forms */
+input[type=text], input[type=email], input[type=password], textarea { background: #ffffff; font-family: "Open Sans", sans-serif; font-size: 14px; letter-spacing: 0.12em; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; border: 1px solid #222; color: #222; padding: 3px; }
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus { color: #222; outline: none; }
+
+input[type=submit] { background-color: #000000; color: #ffffff; font-family: "Open Sans", sans-serif; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; margin: 0; border: none; display: block; cursor: pointer; -webkit-transition: ease-in 0.1s all; -moz-transition: ease-in 0.1s all; -o-transition: ease-in 0.1s all; transition: ease-in 0.1s all; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input:-moz-placeholder, textarea:-moz-placeholder, input::-moz-placeholder, textarea::-moz-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #222; text-transform: uppercase; }
+
+[placeholder]:focus::-webkit-input-placeholder { transition: opacity 0.2s ease; opacity: 0; }
+
+img { max-width: 100%; height: auto; }
+#ie img { width: auto; }
+
+video, embed, iframe { max-width: 100%; }
+
+/* Links */
+a { color: #222; text-decoration: none; -webkit-transition: ease-in 0.1s all; -moz-transition: ease-in 0.1s all; -o-transition: ease-in 0.1s all; transition: ease-in 0.1s all; }
+a:focus, a:active, a:hover { color: #888; text-decoration: none; }
+
+/* Theme Components */
+ul.subnav { list-style: none; margin: 0; }
+ul.subnav li { margin-bottom: 0.5em; }
+
+/* =Header
+----------------------------------------------- */
+/* =Sidebar
+----------------------------------------------- */
+/* =Content
+----------------------------------------------- */
+/* =Footer
+----------------------------------------------- */
+/* =Posts
+----------------------------------------------- */
+/* =Comments
+----------------------------------------------- */
+/* =Archive/Cats
+----------------------------------------------- */
+/* =Error404
+----------------------------------------------- */
+/* =Pages
+----------------------------------------------- */

@@ -1,0 +1,119 @@
+// Breakpoints
+$bp1: 768px;
+$bp2: 1280px;
+$bp3: 1600px;
+
+@mixin bpOnly($pointMin, $pointMax: $bp3) {
+  @if $pointMin == mobile {
+   @media screen and (max-width: $bp1 - 1) { @content; }
+  }
+  @else if $pointMin == tablet {
+   @media screen and (min-width: $bp1) and (max-width: $bp2 - 1) { @content; }
+  }
+  @else if $pointMin == laptop {
+   @media screen and (min-width: $bp2) and (max-width: $bp3 - 1) { @content; }
+  }
+  @else if $pointMin == desktop {
+    @media screen and (min-width: $bp3) { @content; }
+  }
+  @else {
+    @media screen and (min-width: $pointMin) and (max-width: $pointMax) { @content; }
+  }
+}
+@mixin bpMin($point) {
+  @if $point == tablet {
+   @media screen and (min-width: $bp1) { @content; }
+  }
+  @else if $point == laptop {
+   @media screen and (min-width: $bp2) { @content; }
+  }
+  @else if $point == desktop {
+    @media screen and (min-width: $bp3) { @content; }
+  }
+  @else {
+    @media screen and (min-width: $point) { @content; }
+  }
+}
+@mixin bpMax($point) {
+  @if $point == mobile {
+   @media screen and (max-width: $bp1 - 1) { @content; }
+  }
+  @else if $point == tablet {
+   @media screen and (max-width: $bp2 - 1) { @content; }
+  }
+  @else if $point == laptop {
+   @media screen and (max-width: $bp3 - 1) { @content; }
+  }
+  @else  {
+    @media screen and (max-width: $point) { @content; }
+  }
+}
+
+// Spans
+@mixin span($num, $cols) {
+	$one_col: 100% / $cols;
+  width: ($one_col * $num); 
+}
+
+// rem Fallback
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+  
+  @each $value in $values {
+   
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);   
+      $val: parseInt($value);
+      
+      @if $unit == "px" { 
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+      
+      @if $unit == "rem" {
+        $px : append($px,  ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+  
+  @if $px == $rem {    
+    #{$property}: $px; 
+  } @else {
+    #{$property}: $px; 
+    #{$property}: $rem;
+  }
+}
+// Browser prefixes
+@mixin browser-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+// Ease transitions
+$default-ease:ease-in;
+$default-speed:0.1s;
+$default-prop:all;
+@mixin ease($prop: $default-prop, $speed: $default-speed, $ease: $default-ease) {
+  -webkit-transition: #{$speed} #{$prop} #{$ease};
+  -moz-transition: #{$speed} #{$prop} #{$ease};
+  -o-transition: #{$speed} #{$prop} #{$ease};
+  transition: #{$speed} #{$prop} #{$ease};
+}
+
+
+// Colors
+
+// Other Variables

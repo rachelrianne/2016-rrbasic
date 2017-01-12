@@ -1,0 +1,160 @@
+body {
+	background-color: #e6e6e6;
+}
+section {
+	padding: 3em 2em;
+}
+
+///////////////
+//** GRIDS **//
+///////////////
+#grids_example {
+	.col {
+		background-color: lightgray;
+		padding: 10px;
+		margin: 5px 0;
+		border: #333 dotted 1px;
+	}
+}
+
+////////////////////
+//** TYPOGRAPHY **//
+////////////////////
+.sans-serif {
+	font-family: $sans-serif;
+}
+.serif {
+	font-family: $serif;
+}
+
+
+//////////////////
+//** NAV MENU **//
+//////////////////
+.nav_menu {
+	padding: 0;
+	> header {
+		background: white;
+		width: 100%;
+		margin: 0;
+		position: relative;
+		float: left;
+		z-index: 100;
+	}
+}
+nav.menu {
+	@include span(9,12);
+	float: right;
+	@include bp(sm) {
+		max-height: 0;
+		@include span(3,3);
+		margin: 0;
+		position: static;
+		float: right;
+		clear: both;
+		overflow: hidden;
+	}
+	a {
+		color: #333;
+	}
+	> ul {
+		list-style: none;
+		text-align: right;
+		text-transform: uppercase;
+		margin: 0;
+		@include bp(sm) {
+			background: white;
+			width: 100%;
+			text-align: left;
+			padding: 0;
+		}
+		ul {
+			display: none;
+			@include bp(sm) {
+				max-height: 0;
+				display: block;
+				overflow: hidden;
+			}
+		}
+		ul.active {
+			@include bp(sm) {
+				max-height: none;
+			}
+		}
+		> li {
+			padding: 1em 0 1em 1em;
+			display: inline-block;
+			position: relative;
+			@include bp(sm) {
+				padding: 0;
+				display: block;
+				a {
+					padding: 2em 50px;
+					display: block;
+					position: relative;
+				}
+			}
+			ul {
+				background: #aaa;
+				width: auto;
+				text-align: left;
+				list-style: none;
+				margin: 0;
+				position: absolute;
+				top: 3em;
+				left: 0;
+				@include bp(sm) {
+					background: none;
+					padding-bottom: 0;
+					position: static;
+				}
+			}
+		}
+		> li:hover {
+			background-color: #aaa;
+			@include bp(sm) {
+				background-color: transparent;
+			}
+		}
+		li {
+			padding: 1em;
+			position: relative;
+			@include bp(sm) {
+				padding: 0;
+				display: block;
+				li a {
+				 background-color: #ccc;
+				}
+			}
+		}
+		li:hover > ul {
+			background-color: #ccc;
+			display: block;
+			@include bp(sm) {
+				background-color: transparent;
+			}
+		}
+		ul li:hover {
+			background-color: #aaa;
+			@include bp(sm) {
+				background-color: transparent;
+			}
+		}
+	}
+	@include bp(sm) {
+		li.menu-item-has-children > a:after {
+			content: '+';
+			font-size: 1rem;
+			margin-left: 0.5em;
+			vertical-align: top;
+		}
+		li.menu-item-has-children > a.active:after {
+			content: '-';
+		}	
+	}
+}
+nav.main_nav.active {
+	@include bp(sm) {
+		max-height: none;
+	}
+}

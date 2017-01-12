@@ -1,0 +1,13 @@
+{
+  "description": "npm package for automating wordpress themes by Rachel Bain.",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-compass": "^2.1.0",
+    "gulp-livereload": "*",
+    "gulp-clean-css": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-util": "^3.0.7",
+    "vinyl-ftp": "^0.5.0"
+  }
+}
