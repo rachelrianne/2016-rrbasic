@@ -77,11 +77,11 @@ $bp3: 1600px;
       
       @if $unit == "px" { 
         $px : append($px,  $value);
-        $rem: append($rem, ($val / 10 + rem));
+        $rem: append($rem, ($val / 16 + rem));
       }
       
       @if $unit == "rem" {
-        $px : append($px,  ($val * 10 + px));
+        $px : append($px,  ($val * 16 + px));
         $rem: append($rem, $value);
       }
     }

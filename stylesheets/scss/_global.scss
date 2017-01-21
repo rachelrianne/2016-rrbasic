@@ -1,8 +1,8 @@
 * {
-	@include single-transition(width, 0.3s, ease);
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+  @include single-transition(width, 0.3s, ease);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* =Fonts
@@ -14,15 +14,15 @@ $serif: 'Lora', serif;
 
 
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 body {
-	font-family: $sans-serif;
+  font-family: $sans-serif;
 }
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
-	clear: both;
+  clear: both;
 }
 hr {
   display: block;
@@ -35,128 +35,128 @@ hr {
 
 /* Text elements */
 h1 {
-	font-family: $sans-serif;
-	@include rem(font-size, 2.25rem);
-	line-height: 1.6em;
+  font-family: $sans-serif;
+  @include rem(font-size, 2.25rem);
+  line-height: 1.6em;
 }
 h2 {
-	font-family: $sans-serif;
-	@include rem(font-size, 1.5rem);
-	text-transform: uppercase;
+  font-family: $sans-serif;
+  @include rem(font-size, 1.5rem);
+  text-transform: uppercase;
 }
 h3 {
-	font-family: $sans-serif;
-	@include rem(font-size, 1.25rem);
+  font-family: $sans-serif;
+  @include rem(font-size, 1.25rem);
 }
 h4 {
-	font-family: $sans-serif;
-	@include rem(font-size, 1.125rem);
+  font-family: $sans-serif;
+  @include rem(font-size, 1.125rem);
 }
 h5 {
-	font-family: $sans-serif;
-	@include rem(font-size, 1rem);
+  font-family: $sans-serif;
+  @include rem(font-size, 1rem);
 }
 p {
-	font-family: $sans-serif;
-	@include rem(font-size, 1rem);
-	line-height: 1.4em;
-	margin-bottom: 1.625em;
+  font-family: $sans-serif;
+  @include rem(font-size, 1rem);
+  line-height: 1.4em;
+  margin-bottom: 1.625em;
 }
 ul, ol {
-	font-family: $sans-serif;
-	@include rem(font-size, 1rem);
-	line-height: 1.4em;
-	margin: 0 0 1.625em 2.5em;
+  font-family: $sans-serif;
+  @include rem(font-size, 1rem);
+  line-height: 1.4em;
+  margin: 0 0 1.625em 2.5em;
 }
 ul {
-	list-style: square;
+  list-style: square;
 }
 ol {
-	list-style-type: decimal;
-	ol {
-		list-style: upper-alpha;
-		ol {
-			list-style: lower-roman;
-			ol {
-				list-style: lower-alpha;
-			}
-		}
-	}
+  list-style-type: decimal;
+  ol {
+    list-style: upper-alpha;
+    ol {
+      list-style: lower-roman;
+      ol {
+        list-style: lower-alpha;
+      }
+    }
+  }
 }
 ul ul, ol ol, ul ol, ol ul {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 dl {
-	margin: 0 1.625em;
+  margin: 0 1.625em;
 }
 dt {
-	font-weight: bold;
+  font-weight: bold;
 }
 dd {
-	margin-bottom: 1.625em;
+  margin-bottom: 1.625em;
 }
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 cite, em, i {
-	font-style: italic;
+  font-style: italic;
 }
 blockquote {
-	font-family: $serif;
-	@include rem(font-size, 1.25rem);
-	font-style: italic;
-	font-weight: normal;
-	margin: 0 3em 2em;
-	em, i, cite {
-		font-style: normal;
-	}
-	cite {
-		color: #666;
-		font-family: $sans-serif;
-		@include rem(font-size, 1rem);
-		font-weight: 300;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-	}
+  font-family: $serif;
+  @include rem(font-size, 1.25rem);
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 3em 2em;
+  em, i, cite {
+    font-style: normal;
+  }
+  cite {
+    color: #666;
+    font-family: $sans-serif;
+    @include rem(font-size, 1rem);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 }
 pre {
-	background: #f4f4f4;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	@include rem(font-size, 0.85rem);
-	line-height: 1.5;
-	margin-bottom: 1.625em;
-	overflow: auto;
-	padding: 0.75em 1.625em;
+  background: #f4f4f4;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  @include rem(font-size, 0.85rem);
+  line-height: 1.5;
+  margin-bottom: 1.625em;
+  overflow: auto;
+  padding: 0.75em 1.625em;
 }
 code, kbd, samp, var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	@include rem(font-size, 0.85rem);
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  @include rem(font-size, 0.85rem);
 }
 abbr, acronym, dfn {
-	border-bottom: 1px dotted #666;
-	cursor: help;
+  border-bottom: 1px dotted #666;
+  cursor: help;
 }
 address {
-	display: block;
-	margin: 0 0 1.625em;
+  display: block;
+  margin: 0 0 1.625em;
 }
 ins {
-	background: #fff9c0;
-	text-decoration: none;
+  background: #fff9c0;
+  text-decoration: none;
 }
 sup,
 sub {
-	@include rem(font-size, 0.75rem);
-	height: 0;
-	line-height: 1;
-	position: relative;
-	vertical-align: baseline;
+  @include rem(font-size, 0.75rem);
+  height: 0;
+  line-height: 1;
+  position: relative;
+  vertical-align: baseline;
 }
 sup {
-	bottom: 1ex;
+  bottom: 1ex;
 }
 sub {
-	top: .5ex;
+  top: .5ex;
 }
 
 /* Forms */
@@ -168,38 +168,35 @@ input[type="search"],
 input[type="tel"],
 input[type="number"],
 textarea {
-	background: #ffffff;
-	font-family: $sans-serif;
-	font-size: 14px;
-	letter-spacing: 0.12em;
-	@include box-shadow(none);
-	border: 1px solid #222;
-	color: #222;
-	padding: 3px;
-	&:focus {
-		color: #222;
-		outline: none;
-	}
+  background: #ffffff;
+  font-family: $sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  @include box-shadow(none);
+  border: 1px solid #222;
+  color: #222;
+  padding: 3px;
+  &:focus {
+    color: #222;
+    outline: none;
+  }
 }
 
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"]  {
-	background-color: #000000;
-	color: #ffffff;
-	font-family: $sans-serif;
-	font-size: 12px;
-	letter-spacing: 0.16em;
-	text-transform: uppercase;
-	margin: 0;
-	border: none;
-	display: block;
-	cursor: pointer;
-	-webkit-transition: ease-in 0.1s all;
-	-moz-transition: ease-in 0.1s all;
-	-o-transition: ease-in 0.1s all;
-	transition: ease-in 0.1s all;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: $sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0;
+  border: none;
+  display: block;
+  cursor: pointer;
+  @include ease;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
@@ -209,48 +206,44 @@ input::-moz-placeholder,
 textarea::-moz-placeholder, /* Firefox 19+ */
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-	color: #222;
-	text-transform: uppercase;
+  color: #222;
+  text-transform: uppercase;
 }
 [placeholder]:focus::-webkit-input-placeholder {
-	transition: opacity 0.2s ease; 
-	opacity: 0;
+  transition: opacity 0.2s ease; 
+  opacity: 0;
 }
 img {
-	max-width: 100%;
-	height: auto;
-	#ie & {
-		width: auto;
-	}
+  max-width: 100%;
+  height: auto;
+  #ie & {
+    width: auto;
+  }
 }
 video,
 embed,
 iframe {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* Links */
 a {
-	color: #222;
-	text-decoration: none;
-	-webkit-transition: ease-in 0.1s all;
-	-moz-transition: ease-in 0.1s all;
-	-o-transition: ease-in 0.1s all;
-	transition: ease-in 0.1s all;
-	&:focus,
-	&:active,
-	&:hover {
-		color: #888;
-		text-decoration: none;
-	}
+  color: #222;
+  text-decoration: none;
+  @include ease;
+  &:focus,
+  &:active,
+  &:hover {
+    color: #888;
+    text-decoration: none;
+  }
 }
 
 /* Theme Components */
-
 .mobile-only {
-	@include bpMin(tablet) {
-		display: none;
-	}
+  @include bpMin(tablet) {
+    display: none;
+  }
 }
 .assistive-text { 
   position:absolute;
@@ -261,21 +254,21 @@ a {
   overflow:hidden;
 }
 .table {
-	display: table;
-	@include bpOnly(mobile) {
-		display: block;
-	}
+  display: table;
+  @include bpOnly(mobile) {
+    display: block;
+  }
 }
 .table-cell {
-	display: table-cell;
-	@include bpOnly(mobile) {
-		display: block;
-	}
+  display: table-cell;
+  @include bpOnly(mobile) {
+    display: block;
+  }
 
-	&.vert-middle {
-		vertical-align: middle;
-	}
-	&.vert-bottom {
-		vertical-align: bottom;
-	}
+  &.vert-middle {
+    vertical-align: middle;
+  }
+  &.vert-bottom {
+    vertical-align: bottom;
+  }
 }
